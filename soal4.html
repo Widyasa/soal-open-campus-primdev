@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cara Membuat Sort Data Descending</title>
+</head>
+<body>
+<p>gunakan "," untuk melakukan split data</p>
+<input type="text" id="input">
+<button onclick="sortAscending()">Ascending</button>
+<button onclick="sortDescending()">Descending</button>
+<h1 id="output"></h1>
+
+
+<script>
+    function sortAscending() {
+        const x = document.getElementById('input').value;
+        let output = "";
+        let splitter = x.split(",");
+        if (!isNaN(x)){
+            output = splitter.sort(function (a, b) {return a-b});
+        } else {
+            output = splitter.sort(function (a, b) {return a.localeCompare(b)});
+        }
+        document.getElementById('output').innerHTML = output;
+    }
+    function sortDescending() {
+
+    }
+</script>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tes api</title>
+</head>
+<body>
+<form action="https://reqres.in/api/users" method="post">
+    <h1>LIHAT OUTPUT DI CONSOLE</h1>
+</form>
+<script src="api.js"></script>
+<script>
+    const endpoint = "https://pokeapi.co/api/v2/pokemon";//link dari api
+
+    fetch(endpoint) //melakukan fetch kepada api
+        .then(({results}) => console.log(results)) //memanggil output
+</script>
+</body>
+</html>
